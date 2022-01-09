@@ -1,0 +1,23 @@
+{
+  "name": "syncsongs",
+  "version": "1.0.0",
+  "author": "Simon Berggren",
+  "scripts": {
+    "build": "esbuild src/index.ts --outfile=build/index.js --bundle --bundle --minify --platform=node",
+    "b": "node esbuild.js",
+    "watch": "npm run build -- --watch",
+    "dev": "nodemon ./build/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimonBerggren/SyncSongs.git"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^17.0.8",
+    "esbuild": "^0.14.10",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  }
+}
