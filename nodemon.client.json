@@ -1,0 +1,7 @@
+{
+    "watch": ["src"],
+    "ext": "js, json, ts",
+    "execMap": {
+        "js": "npm run build-client && node build/client/client.js"
+    }
+}

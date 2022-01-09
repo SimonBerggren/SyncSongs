@@ -1,8 +1,9 @@
 require('esbuild').build({
-    entryPoints: ['./src/index.ts'],
-    outfile: 'F:\\Games\\Clone Hero\\index.js', //'./build/index.js',
+    entryPoints: ['./src/client/client.ts'],
+    outfile: './build/client/client.js',
     minify: true,
     bundle: true,
     target: 'node17',
     platform: 'node',
+    treeShaking: true,
 }).catch(() => process.exit(1))

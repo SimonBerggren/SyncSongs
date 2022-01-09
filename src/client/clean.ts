@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import { terminal } from '../terminal';
+import { terminal } from '../shared/terminal';
 
 export const clean = (): Promise<string[]> => {
     return new Promise((resolve, reject) => {
         terminal.question(
             'Where is your badsongs.txt? Leave empty if this script is run inside your Clone Hero folder ',
             (location) => {
-                const songPath = location || path.resolve(__dirname); // 'F:Games/Clone Hero';
+                const songPath = location || path.resolve(__dirname);
                 const badsongsPath = `${songPath}\\badsongs.txt`;
 
                 if (!fs.existsSync(badsongsPath)) {
